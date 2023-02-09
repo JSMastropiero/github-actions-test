@@ -1,0 +1,54 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:456685560018:task-definition/test:1",
+    "containerDefinitions": [
+        {
+            "name": "github-actions-test",
+            "image": "456685560018.dkr.ecr.us-east-1.amazonaws.com/github-actions-test",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "github-actions-test-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 0,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": []
+        }
+    ],
+    "family": "test",
+    "executionRoleArn": "arn:aws:iam::456685560018:role/ecsTaskExecutionRole",
+    "networkMode": "bridge",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-02-09T09:12:43.760Z",
+    "registeredBy": "arn:aws:iam::456685560018:root",
+    "tags": []
+}
